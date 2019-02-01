@@ -1,0 +1,7 @@
+{    
+    "css":  {        
+        "style" :  [
+            "bower_components/@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.min.css"        
+        ]    
+    } 
+}
