@@ -1,0 +1,23 @@
+{
+  "name": "dialogcreater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Susalko/DialogCreater.git"
+  },
+  "author": "Artyom Susalko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Susalko/DialogCreater/issues"
+  },
+  "homepage": "https://github.com/Susalko/DialogCreater#readme",
+  "devDependencies": {
+    "electron": "^4.0.3"
+  }
+}
