@@ -21,6 +21,7 @@
     "electron": "^4.0.3"
   },
   "dependencies": {
-    "@salesforce-ux/design-system": "^2.8.1"
+    "@salesforce-ux/design-system": "^2.8.1",
+    "@salesforce/design-system-react": "^0.9.4"
   }
 }

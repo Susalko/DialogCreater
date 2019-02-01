@@ -1,50 +1,17 @@
-const { app, BrowserWindow } = require('electron');
-// const slds = require('design-system');
+'use strict'
 
-// Храните глобальную ссылку на объект окна, если вы этого не сделаете, окно будет
-// автоматически закрываться, когда объект JavaScript собирает мусор.
-let win;
+const { app } = require('electron');
 
-function createWindow () {
-  // Создаёт окно браузера.
-  win = new BrowserWindow({ width: 800, height: 600 })
-  let test;
-  // и загрузит index.html приложение.
-  win.loadFile('index.html')
+const Window = require('./window');
 
-  // Открыть средства разработчика.
-  win.webContents.openDevTools()
-
-  // Вызывается, когда окно будет закрыто.
-  win.on('closed', () => {
-    // Разбирает объект окна, обычно вы можете хранить окна     
-    // в массиве, если ваше приложение поддерживает несколько окон в это время,
-    // тогда вы должны удалить соответствующий элемент.
-    win = null
-  })
+function main (){
+  let mainWindow = new Window({
+    file: 'index.html'
+  });
 }
 
-// Этот метод будет вызываться, когда Electron закончит 
-// инициализацию и готов к созданию окон браузера.
-// Некоторые интерфейсы API могут использоваться только после возникновения этого события.
-app.on('ready', createWindow)
+app.on('ready', main);
 
-// Выйти, когда все окна будут закрыты.
-app.on('window-all-closed', () => {
-  // Оставаться активным до тех пор, пока пользователь не выйдет полностью с помощью Cmd + Q,
-  // это обычное дело для приложений и их строки меню на macOS
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
-})
-
-app.on('activate', () => {
-   // На MacOS обычно пересоздают окно в приложении,
-   // после того, как на иконку в доке нажали, и других открытых окон нету.
-  if (win === null) {
-    createWindow()
-  }
-})
-
-// В этом файле вы можете включить код другого основного процесса 
-// вашего приложения. Можно также поместить их в отдельные файлы и применить к ним require.
+app.on('window-all-closed', function(){
+  app.quit();
+});
