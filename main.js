@@ -15,7 +15,7 @@ function main() {
         with: test.size.width / 2,
         height: test.size.height - test.size.height * 0.5
     })
-
+    mainWindow.webContents.openDevTools();
     let addTodoWin;
 
     // create add todo window

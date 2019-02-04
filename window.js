@@ -6,7 +6,7 @@ const { BrowserWindow } = require('electron')
 const defaultProps = {
     width: 500,
     height: 600,
-    show: false
+    show: true
 }
 
 class Window extends BrowserWindow {
