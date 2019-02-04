@@ -12,7 +12,7 @@ function main() {
     console.log(test.size.height);
     let mainWindow = new Window({
         file: path.join('./render', 'index.html'),
-        with: test.size.width / 2,
+        with: 600,
         height: test.size.height - test.size.height * 0.5
     })
     mainWindow.webContents.openDevTools();
