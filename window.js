@@ -1,7 +1,7 @@
 'use strict'
 
 const { BrowserWindow } = require('electron')
-
+const teststst = require('C:/github/dialogCreater/config/config');
 // default window settings
 const defaultProps = {
     width: 500,
@@ -20,6 +20,7 @@ class Window extends BrowserWindow {
 
         // gracefully show when ready to prevent flickering
         this.once('ready-to-show', () => {
+            console.log(teststst);
             this.show()
         })
     }

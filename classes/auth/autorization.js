@@ -1,15 +1,15 @@
 'use strict'
-// const tester = require('../../config/config.json');
-// import configer from '../../config/config.json';
-// import * as dada from '../../config/config.json'
+// const setting = require('../../config/config');
+// import config from '../../package.json';
+// import config from '../../package.json';
+const config = require('C:/github/dialogCreater/config/config');
 class Authorisation {
     constructor() {
         this.token = null;
-        this.token2 = 123;
     }
     getSession() {
         var tmp;
-        console.log(require('../../config/config.js'));
+        console.log(config);
         let xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://login.salesforce.com/services/oauth2/token', false);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');

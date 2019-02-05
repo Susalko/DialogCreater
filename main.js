@@ -6,8 +6,9 @@ const electron = require('electron');
 
 const Window = require('./window');
 
+
 function main() {
-    console.log(electron.screen.getPrimaryDisplay());
+    // console.log(teststst);
     let test = electron.screen.getPrimaryDisplay();
     console.log(test.size.height);
     let mainWindow = new Window({
