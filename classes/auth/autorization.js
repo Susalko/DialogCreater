@@ -2,7 +2,9 @@
 // const setting = require('../../config/config');
 // import config from '../../package.json';
 // import config from '../../package.json';
-const config = require('C:/github/dialogCreater/config/config');
+
+const alias = require('module-alias/register');
+const config = require('@my_config');
 class Authorisation {
     constructor() {
         this.token = null;

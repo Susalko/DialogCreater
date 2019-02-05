@@ -24,5 +24,10 @@
     "@salesforce-ux/design-system": "^2.8.1",
     "@salesforce/design-system-react": "^0.9.4",
     "module-alias": "^2.1.0"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@classes": "./classes",
+    "@my_config": "./config/config.json"
   }
 }
